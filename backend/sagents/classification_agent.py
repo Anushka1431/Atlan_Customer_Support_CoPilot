@@ -46,7 +46,7 @@ def classify_ticket(ticket: dict) -> dict:
 
     Rules:
     - Output valid JSON only (no text around it).
-    - Only 1 most relevant topic tag.
+    - Choose 1 or 2 most relevant topic tags.
     - Priority reflects urgency implied in the ticket.
     """
 

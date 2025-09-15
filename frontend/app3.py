@@ -19,7 +19,7 @@ BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/sse")
 # Async helper wrapper (unchanged)
 # -----------------------------
 async def process_ticket(ticket_id, ticket_text):
-    client = SupportMCPClient(server_url="BACKEND_URL")
+    client = SupportMCPClient(server_url="http://localhost:8000/sse")
     await client.connect()
 
     # Step 1: Classification
@@ -102,8 +102,8 @@ if mode == "Bulk Tickets":
                     elif final_response["type"] == "routing":
                         st.write(final_response.get("message", ""))
 
-                    st.caption("Raw outputs for debugging")
-                    st.code(final_response.get("raw", ""), language="json")
+                    # st.caption("Raw outputs for debugging")
+                    # st.code(final_response.get("raw", ""), language="json")
         except Exception as e:
             st.error(f"Failed to parse JSON file: {e}")
     else:
@@ -131,8 +131,8 @@ elif mode == "Single Ticket":
         elif final_response["type"] == "routing":
             st.write(final_response.get("message", ""))
 
-        st.caption("Raw outputs for debugging")
-        st.code(final_response.get("raw", ""), language="json")
+        # st.caption("Raw outputs for debugging")
+        # st.code(final_response.get("raw", ""), language="json")
 
 
 # ...existing code...
@@ -204,7 +204,7 @@ elif mode == "Live Chat":
             st.session_state.chat_text += f"\n{user_msg}"
 
             async def call_live_qna(msg, session_id):
-                client = SupportMCPClient(server_url="BACKEND_URL")
+                client = SupportMCPClient(server_url="http://localhost:8000/sse")
                 await client.connect()
                 try:
                     result = await client.run_tool(
