@@ -81,22 +81,29 @@ Clone the repository from your version control system and navigate to the projec
 
 #### 2. Backend Setup
 
-Navigate to the backend directory, create a virtual environment, and install the required dependencies. Then start the MCP server which will run on port 8000.
+Navigate to the root directory, create a virtual environment, and install the required dependencies. 
+Create .env file in backend directory with:
+HF_TOKEN=your_huggingface_token
+HF_MODEL=meta-llama/Llama-3.1-8B-Instruct:cerebras
+HF_API_URL=[your_api_url >> .env](https://router.huggingface.co/v1/chat/completions)
+BACKEND_URL=http://localhost:8000/sse
+PROJECT_ROOT=you_project_root_directory
+
+Then run the following commands and start the MCP server which will run on port 8000.
 
 ```bash
-cd backend
-pip install -r requirements.txt
-python main_mcp_server.py
+pip install -r backend/requirements.txt
+python backend/knowledge_base/atlan_info.py
+python backend/main_mcp_server.py
 ```
 
 #### 3. Frontend Setup
 
-In a new terminal, navigate to the frontend directory, install the frontend dependencies, and launch the Streamlit application.
+In a new terminal, install the frontend dependencies, and launch the Streamlit application.
 
 ```bash
-cd frontend
-pip install -r requirements.txt
-streamlit run app.py
+pip install -r frontend/requirements.txt
+streamlit run frontend/app3.py
 ```
 
 #### 4. Access the Application
@@ -110,15 +117,14 @@ Once both services are running:
 ### Features
 
 - **Bulk Ticket Classification**: Load and analyze sample tickets with automatic topic classification, sentiment analysis, and priority assignment
+- **Single Ticket Classification**: Analyze single ticket with automatic topic classification, sentiment analysis, and priority assignment
 - **Interactive AI Agent**: Submit new support tickets through the intuitive interface and receive real-time AI analysis and responses
-- **Feedback System**: Provide corrections and feedback to improve the system's accuracy over time through the Feedback Agent
 - **Knowledge-Based Responses**: Get accurate, sourced responses through the RAG Agent that retrieves information from the knowledge base
 - **Smart Routing**: Automatically route tickets that fall outside the knowledge base scope to appropriate teams or escalation paths
-- **Voice Input**: Submit support tickets using voice transcription powered by Whisper integration for hands-free interaction
-
+  
 ### Getting Started
 
-Navigate to the frontend interface and explore the bulk classification feature with sample tickets. Try submitting new tickets through the interactive interface to see real-time AI processing. Experiment with the voice input functionality for convenient ticket submission. The system provides comprehensive AI analysis including topic classification, sentiment evaluation, and priority assignment for each ticket.
+Navigate to the frontend interface and explore the bulk classification feature with sample tickets. Try submitting new tickets through the interactive interface to see real-time AI processing. Experiment with the single ticket and live chat functionality for convenient ticket submission. The system provides comprehensive AI analysis including topic classification, sentiment evaluation, and priority assignment for each ticket.
 
 ## 🔮 Future Improvements
 
@@ -133,18 +139,10 @@ Navigate to the frontend interface and explore the bulk classification feature w
 
 ## 🛠 Tech Stack
 
-The system leverages modern AI and web technologies including Python with FastAPI and MCP Server for the backend, Streamlit for the frontend interface, HuggingFace Transformers and LLaMA for AI processing, ChromaDB for vector storage, and OpenAI Whisper for speech processing capabilities.
+The system leverages modern AI and web technologies including Python with FastAPI and MCP Server for the backend, Streamlit for the frontend interface, HuggingFace Transformers and LLaMA for AI processing, ChromaDB for vector storage.
 
-## 📄 License
 
-MIT License. See LICENSE file for details.
 
-## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📞 Support
-
-If you have any questions or run into issues, please open an issue on GitHub or contact the development team.
 
 
