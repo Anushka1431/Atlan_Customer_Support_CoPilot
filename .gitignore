@@ -42,3 +42,9 @@ env/
 dist/
 build/
 *.spec
+
+# ChromaDB storage
+chromadb/
+*.chroma
+*.sqlite3
+*.db
