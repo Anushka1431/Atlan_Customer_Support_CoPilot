@@ -1,0 +1,19 @@
+[
+ {
+   "id": "TICKET-245",
+   "subject": "Connecting Snowflake to Atlan - required permissions?",
+   "body": "Hi team, we're trying to set up our primary Snowflake production database as a new source in Atlan, but the connection keeps failing. We've tried using our standard service account, but it's not working. Our entire BI team is blocked on this integration for a major upcoming project, so it's quite urgent. Could you please provide a definitive list of the exact permissions and credentials needed on the Snowflake side to get this working? Thanks."
+ },
+ {
+   "id": "TICKET-246",
+   "subject": "Which connectors automatically capture lineage?",
+   "body": "Hello, I'm new to Atlan and trying to understand the lineage capabilities. The documentation mentions automatic lineage, but it's not clear which of our connectors (we use Fivetran, dbt, and Tableau) support this out-of-the-box. We need to present a clear picture of our data flow to leadership next week. Can you explain how lineage capture differs for these tools?"
+ },
+ {
+   "id": "TICKET-247",
+   "subject": "Deployment of Atlan agent for private data lake",
+   "body": "Our primary data lake is hosted on-premise within a secure VPC and is not exposed to the internet. We understand we need to use the Atlan agent for this, but the setup instructions are a bit confusing for our security team. This is a critical source for us, and we can't proceed with our rollout until we get this connected. Can you provide a detailed deployment guide or connect us with a technical expert?"
+ }
+]
+
+

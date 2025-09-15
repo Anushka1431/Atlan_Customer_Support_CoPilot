@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+
+# Environment & config
+*.env
+*.ini
+*.cfg
+
+# Logs & cache
+*.log
+*.out
+*.pid
+*.sqlite3
+*.db
+.DS_Store
+.cache/
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Streamlit
+.streamlit/
+
+# MCP / FastAPI
+*.db-journal
+
+# Build
+dist/
+build/
+*.spec

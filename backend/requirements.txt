@@ -1,0 +1,10 @@
+python-dotenv
+requests
+chromadb>=0.4.0
+sentence-transformers>=2.2.2
+beautifulsoup4
+tqdm
+fastapi 
+uvicorn
+mcp[cli]
+streamlit

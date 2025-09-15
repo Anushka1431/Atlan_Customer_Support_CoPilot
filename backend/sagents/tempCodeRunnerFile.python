@@ -1,0 +1,3 @@
+assistant_reply = "Thank you for the information. Could you clarify more?"  # placeholder
+        # agent.add_assistant_message(assistant_reply)
+        # print(f"Assistant: {assistant_reply}")
