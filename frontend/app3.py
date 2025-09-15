@@ -13,8 +13,8 @@ if str(project_root) not in sys.path:
 
 from backend.mcp_client import SupportMCPClient
 
-BACKEND_URL = "http://localhost:8000/sse"
-#corect one 
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/sse")
+#correct one
 # -----------------------------
 # Async helper wrapper (unchanged)
 # -----------------------------

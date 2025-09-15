@@ -80,7 +80,8 @@ async def live_qna_tool(session_id: str, user_input: str) -> dict:
 
 
 # 5. Run server
+# Change the host to listen on all interfaces
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(mcp.sse_app, host="127.0.0.1", port=8000)
-
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(mcp.sse_app, host="0.0.0.0", port=port)
