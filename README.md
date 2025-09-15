@@ -82,12 +82,17 @@ Clone the repository from your version control system and navigate to the projec
 #### 2. Backend Setup
 
 Navigate to the root directory, create a virtual environment, and install the required dependencies. 
-Create .env file in backend directory with:
-HF_TOKEN=your_huggingface_token
+Create a .env file in the backend directory with the following configuration:
+envHF_TOKEN=your_huggingface_token
 HF_MODEL=meta-llama/Llama-3.1-8B-Instruct:cerebras
-HF_API_URL=[your_api_url >> .env](https://router.huggingface.co/v1/chat/completions)
+HF_API_URL=your_api_url
 BACKEND_URL=http://localhost:8000/sse
-PROJECT_ROOT=you_project_root_directory
+PROJECT_ROOT=your_project_root_directory
+Replace the placeholder values with your actual:
+
+HF_TOKEN: Your HuggingFace API token for model access
+HF_API_URL: Your specific HuggingFace API endpoint URL
+PROJECT_ROOT: Full path to your project root directory
 
 Then run the following commands and start the MCP server which will run on port 8000.
 
@@ -140,6 +145,7 @@ Navigate to the frontend interface and explore the bulk classification feature w
 ## 🛠 Tech Stack
 
 The system leverages modern AI and web technologies including Python with FastAPI and MCP Server for the backend, Streamlit for the frontend interface, HuggingFace Transformers and LLaMA for AI processing, ChromaDB for vector storage.
+
 
 
 
