@@ -2,6 +2,9 @@
 
 A **multi-agent AI-powered customer support platform** designed to ingest, classify, and respond to support tickets efficiently. The system combines a **Fast MCP server and client** with a **Streamlit orchestrator**, and leverages **Retrieval Augmented Generation (RAG)** for knowledge-grounded responses.
 
+#Live Demo
+
+
 ## 📑 Table of Contents
 
 - [Overview](#overview)
@@ -48,6 +51,9 @@ This project provides a **multi-agent AI support system** that enables:
 - **Tech**: Lightweight logging system that stores feedback data for model retraining and performance optimization.
 
 ## 🏗 Architecture
+
+<img width="960" height="593" alt="Untitled drawing (9)" src="https://github.com/user-attachments/assets/3a988288-5882-460f-9758-6dfdcc6948d4" />
+
 
 The system follows a multi-layer architecture with the Streamlit UI orchestrator at the frontend, handling live chat, ticket input, and voice input. This connects to a Fast MCP Server that manages four specialized agents: Classification, RAG, Routing, and Feedback. The backend integrates with data storage, knowledge base, and ChromaDB vector database for comprehensive ticket processing and response generation.
 
@@ -143,3 +149,4 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 ## 📞 Support
 
 If you have any questions or run into issues, please open an issue on GitHub or contact the development team.
+
