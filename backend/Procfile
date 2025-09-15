@@ -1,2 +1,0 @@
-# filepath: d:\anushka\Atlan_Project\backend\Procfile
-web: python -m main_mcp_server
