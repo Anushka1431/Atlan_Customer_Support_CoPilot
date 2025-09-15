@@ -2,9 +2,6 @@
 
 A **multi-agent AI-powered customer support platform** designed to ingest, classify, and respond to support tickets efficiently. The system combines a **Fast MCP server and client** with a **Streamlit orchestrator**, and leverages **Retrieval Augmented Generation (RAG)** for knowledge-grounded responses.
 
-#Live Demo
-
-
 ## 📑 Table of Contents
 
 - [Overview](#overview)
@@ -24,7 +21,7 @@ This project provides a **multi-agent AI support system** that enables:
 2. **Interactive AI Agent**: Submit new tickets and view both **internal AI analysis** and **final responses**.
 3. **Backend Integration**: A **Fast MCP server** manages AI logic and agent orchestration.
 4. **Frontend Orchestration**: **Streamlit UI** acts as the orchestrator for displaying analyses and responses in real time.
-5. **Voice & Live Chat**: Support for **typed chat** and **voice-based ticket submission** using Whisper STT integration.
+5. **Live Chat**: Support for **typed chat** integration.
 
 **Problem Statement**: Build a core AI pipeline to ingest, classify, and respond to support tickets, demonstrated through a functional dummy helpdesk.
 
@@ -55,7 +52,7 @@ This project provides a **multi-agent AI support system** that enables:
 <img width="960" height="593" alt="Untitled drawing (9)" src="https://github.com/user-attachments/assets/3a988288-5882-460f-9758-6dfdcc6948d4" />
 
 
-The system follows a multi-layer architecture with the Streamlit UI orchestrator at the frontend, handling live chat, ticket input, and voice input. This connects to a Fast MCP Server that manages four specialized agents: Classification, RAG, Routing, and Feedback. The backend integrates with data storage, knowledge base, and ChromaDB vector database for comprehensive ticket processing and response generation.
+The system follows a multi-layer architecture with the Streamlit UI orchestrator at the frontend, handling live chat, bulk and single ticket input. This connects to a Fast MCP Server that manages four specialized agents: Classification, RAG, Routing, and Feedback. The backend integrates with data storage, knowledge base, and ChromaDB vector database for comprehensive ticket processing and response generation.
 
 ## ⚖ Major Design Decisions & Trade-offs
 
@@ -149,4 +146,5 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 ## 📞 Support
 
 If you have any questions or run into issues, please open an issue on GitHub or contact the development team.
+
 
