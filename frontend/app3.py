@@ -13,13 +13,13 @@ if str(project_root) not in sys.path:
 
 from backend.mcp_client import SupportMCPClient
 
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/sse")
+BACKEND_URL = "http://localhost:8000/sse"
 #corect one 
 # -----------------------------
 # Async helper wrapper (unchanged)
 # -----------------------------
 async def process_ticket(ticket_id, ticket_text):
-    client = SupportMCPClient(server_url="http://localhost:8000/sse")
+    client = SupportMCPClient(server_url=BACKEND_URL)
     await client.connect()
 
     # Step 1: Classification
@@ -204,7 +204,7 @@ elif mode == "Live Chat":
             st.session_state.chat_text += f"\n{user_msg}"
 
             async def call_live_qna(msg, session_id):
-                client = SupportMCPClient(server_url="http://localhost:8000/sse")
+                client = SupportMCPClient(server_url=BACKEND_URL)
                 await client.connect()
                 try:
                     result = await client.run_tool(
