@@ -11,7 +11,7 @@ A **multi-agent AI-powered customer support platform** designed to ingest, class
 - [Setup & Installation](#setup--installation)
 - [Usage](#usage)
 - [Future Improvements](#future-improvements)
-- [License](#license)
+
 
 ## Overview
 
@@ -160,6 +160,7 @@ Navigate to the frontend interface and explore the bulk classification feature w
 The system leverages modern AI and web technologies including Python with Agentic AI and MCP Server for the backend, Streamlit for the frontend interface, HuggingFace requests API and LLaMA for AI processing, ChromaDB for vector storage.
 
 Thankyou.
+
 
 
 
