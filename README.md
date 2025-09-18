@@ -25,7 +25,7 @@ This project provides a **multi-agent AI support system** that enables:
 
 **Problem Statement**: Build a core AI pipeline to ingest, classify, and respond to support tickets, demonstrated through a functional dummy helpdesk.
 
-## 🤖 Proposed Agents
+## Proposed Agents
 
 ### 1. Classification Agent
 
@@ -115,13 +115,13 @@ Once both services are running:
 
 #### 1. Pull Docker images
 
-docker pull anushkapawar/atlan_customer_support_copilot-backend:latest
+docker pull anushkapawar/atlan_customer_support_copilot-backend:latest  
 docker pull anushkapawar/atlan_customer_support_copilot-frontend:latest
 
 create a .env file as ashown above
 #### 2. Run containers
 
-docker run -d --env-file .env -p 8000:8000 anushkapawar/atlan_customer_support_copilot-backend:latest
+docker run -d --env-file .env -p 8000:8000 anushkapawar/atlan_customer_support_copilot-backend:latest  
 docker run -d --env-file .env -p 8501:8501 anushkapawar/atlan_customer_support_copilot-frontend:latest
 
 #### 4. Access the Application
@@ -160,6 +160,7 @@ Navigate to the frontend interface and explore the bulk classification feature w
 The system leverages modern AI and web technologies including Python with Agentic AI and MCP Server for the backend, Streamlit for the frontend interface, HuggingFace requests API and LLaMA for AI processing, ChromaDB for vector storage.
 
 Thankyou.
+
 
 
 
