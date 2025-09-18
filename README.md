@@ -113,26 +113,22 @@ Once both services are running:
 
 ### Run with Docker
 
-####1. Pull Docker images
+#### 1. Pull Docker images
 
 docker pull anushkapawar/atlan_customer_support_copilot-backend:latest
 docker pull anushkapawar/atlan_customer_support_copilot-frontend:latest
 
 create a .env file as ashown above
-####2. Run containers
+#### 2. Run containers
 
-# Backend
 docker run -d --env-file .env -p 8000:8000 anushkapawar/atlan_customer_support_copilot-backend:latest
-
-# Frontend
 docker run -d --env-file .env -p 8501:8501 anushkapawar/atlan_customer_support_copilot-frontend:latest
 
+#### 4. Access the Application
 
-####3. Access the app
-
-Frontend → http://localhost:8501
-
-Backend API → http://localhost:8000
+Once both services are running:
+- Frontend UI: [http://localhost:8501](http://localhost:8501)
+- Backend API: [http://localhost:8000](http://localhost:8000)
 
 ## Usage
 
@@ -164,6 +160,7 @@ Navigate to the frontend interface and explore the bulk classification feature w
 The system leverages modern AI and web technologies including Python with Agentic AI and MCP Server for the backend, Streamlit for the frontend interface, HuggingFace requests API and LLaMA for AI processing, ChromaDB for vector storage.
 
 Thankyou.
+
 
 
 
