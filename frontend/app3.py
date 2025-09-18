@@ -4,25 +4,12 @@ import uuid
 from pathlib import Path
 import streamlit as st
 from dotenv import load_dotenv
-
-# Load env variables
-load_dotenv()
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# project_root = Path("D:/anushka/Atlan_Project").resolve()
-# if str(project_root) not in sys.path:
-#     sys.path.insert(0, str(project_root))
-# _project_root_env = os.getenv("PROJECT_ROOT")
-# if _project_root_env:
-#     project_root = Path(_project_root_env).resolve()
-# else:
-#     project_root = Path(__file__).resolve().parent  # contains 'sagents'
-
-# if str(project_root) not in sys.path:
-#     sys.path.insert(0, str(project_root))
-    
-from backend.mcp_client import SupportMCPClient
+# Load env variables
+load_dotenv()
+from common.mcp_client import SupportMCPClient
 
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/sse")
 #correct one

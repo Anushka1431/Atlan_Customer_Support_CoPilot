@@ -48,3 +48,4 @@ chromadb/
 *.chroma
 *.sqlite3
 *.db
+backend/knowledge_base/vectorstore_chroma/

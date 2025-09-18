@@ -3,8 +3,8 @@ version: "3.9"
 services:
   backend:
     build:
-      context: ./backend
-      dockerfile: backend.Dockerfile
+      context: .
+      dockerfile: backend/backend.Dockerfile
     container_name: helpdesk-backend
     ports:
       - "8000:8000"
@@ -13,8 +13,8 @@ services:
 
   frontend:
     build:
-      context: ./frontend
-      dockerfile: frontend.Dockerfile
+      context: .
+      dockerfile: frontend/frontend.Dockerfile
     container_name: helpdesk-frontend
     ports:
       - "8501:8501"

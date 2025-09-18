@@ -6,7 +6,9 @@ from dotenv import load_dotenv
 
 # Load env variables
 load_dotenv()
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # project_root = Path("D:/anushka/Atlan_Project").resolve()
 # if str(project_root) not in sys.path:
 #     sys.path.insert(0, str(project_root))
@@ -24,6 +26,9 @@ from sagents.rag_qna_agent import generate_answer
 from sagents.routing_agent import route_ticket
 from sagents.STT import transcribe_audio
 from sagents.live_converse import TicketExtractionAgent
+
+# Import SupportMCPClient from common
+from common.mcp_client import SupportMCPClient
 import asyncio
 import json     
 from dotenv import load_dotenv

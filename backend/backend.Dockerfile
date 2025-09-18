@@ -11,12 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install pip & wheel first (faster installs)
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
-
+COPY common ./common
 COPY . .
 
-RUN python knowledge_base/atlan_info.py
+RUN python backend/knowledge_base/atlan_info.py
 
 EXPOSE 8000
-CMD ["python", "main_mcp_server.py"]
+CMD ["python", "backend/main_mcp_server.py"]
