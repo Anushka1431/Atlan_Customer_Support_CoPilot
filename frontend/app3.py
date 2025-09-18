@@ -7,18 +7,20 @@ from dotenv import load_dotenv
 
 # Load env variables
 load_dotenv()
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # project_root = Path("D:/anushka/Atlan_Project").resolve()
 # if str(project_root) not in sys.path:
 #     sys.path.insert(0, str(project_root))
-_project_root_env = os.getenv("PROJECT_ROOT")
-if _project_root_env:
-    project_root = Path(_project_root_env).resolve()
-else:
-    project_root = Path(__file__).resolve().parent  # contains 'sagents'
+# _project_root_env = os.getenv("PROJECT_ROOT")
+# if _project_root_env:
+#     project_root = Path(_project_root_env).resolve()
+# else:
+#     project_root = Path(__file__).resolve().parent  # contains 'sagents'
 
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root))
+# if str(project_root) not in sys.path:
+#     sys.path.insert(0, str(project_root))
     
 from backend.mcp_client import SupportMCPClient
 
@@ -82,7 +84,7 @@ async def process_ticket(ticket_id, ticket_text):
 # Streamlit UI (full file)
 # -----------------------------
 st.set_page_config(page_title="Ticket Dashboard", layout="wide")
-st.title("🎫 Ticket Classification Dashboard")
+st.title("Ticket Classification Dashboard")
 
 mode = st.sidebar.radio("Select Mode", ["Bulk Tickets", "Single Ticket", "Live Chat"])
 

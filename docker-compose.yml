@@ -8,6 +8,8 @@ services:
     container_name: helpdesk-backend
     ports:
       - "8000:8000"
+    env_file:
+      - .env
 
   frontend:
     build:
@@ -20,3 +22,5 @@ services:
       - backend
     environment:
       - BACKEND_URL=http://backend:8000/sse
+    env_file:
+      - .env

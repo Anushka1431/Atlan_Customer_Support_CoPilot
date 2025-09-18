@@ -8,3 +8,4 @@ fastapi==0.110.0
 uvicorn
 mcp[cli]
 streamlit
+numpy<2.0
